@@ -64,7 +64,6 @@ t_ut1 = (julian_date_fractional - 2451545.0) / 36525
 
 gmst_angle = 67310.54841 + (876600 * 60 * 60 + 8640184.812866)*t_ut1 + 0.093104*t_ut1**2 - 6.2e-6*t_ut1**3
 gmst_angle_radians = math.fmod(math.radians(math.fmod(gmst_angle,86400)/240) + 2*math.pi, 2*math.pi)
-print(gmst_angle_radians)
 
 Rz = [[math.cos(-gmst_angle_radians), -math.sin(-gmst_angle_radians), 0], 
       [math.sin(-gmst_angle_radians), math.cos(-gmst_angle_radians), 0], 
